@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.health-info {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.player-health-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    width: 100%;
+}
+
+.player-health {
+    background: yellow;
+    height: 30px;
+    width: 100%;
+}
+
+.player-health-left {
+    position: absolute;
+    background: blue;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.enemy-health-wrapper {
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.enemy-health {
+    background: yellow;
+    height: 30px;
+    width: 100%;
+}
+
+.enemy-health-left {
+    position: absolute;
+    background: blue;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.fighting-result {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
