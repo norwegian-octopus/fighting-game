@@ -1,2 +1,0 @@
-# fighting-games pet-proj
-ignore/
