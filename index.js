@@ -28,7 +28,7 @@ const shop = new Sprite({
 
 const player = new Fighter({
     position: {
-        x: 0,
+        x: 100,
         y: 0
     },
     velocity: {
@@ -93,7 +93,7 @@ const player = new Fighter({
 
 const enemy = new Fighter({
     position: {
-        x: 400,
+        x: 850,
         y: 100
     },
     velocity: {
@@ -180,6 +180,8 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height);
     background.update();
     shop.update();
+    c.fillStyle = 'rgba(255, 255, 255, 0.14)';
+    c.fillRect(0, 0, canvas.width, canvas.height);
     player.update();
     enemy.update();
 
@@ -230,7 +232,10 @@ function animate() {
     ) {
         enemy.takeHit();
         player.isAttacking = false;
-        document.querySelector('#enemy-health').style.width = `${enemy.health}%`;
+        // document.querySelector('#enemy-health').style.width = `${enemy.health}%`;
+        gsap.to('#enemy-health', {
+            width: `${enemy.health}%`
+        });
 
         // console.log('player attacks');
     }
@@ -247,7 +252,10 @@ function animate() {
     ) {
         player.takeHit();
         enemy.isAttacking = false;
-        document.querySelector('#player-health').style.width = `${player.health}%`;
+        // document.querySelector('#player-health').style.width = `${player.health}%`;
+        gsap.to('#player-health', {
+            width: `${player.health}%`
+        });
 
         // console.log('enemy attacks');
     }
